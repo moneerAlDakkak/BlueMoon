@@ -56,7 +56,7 @@ document.getElementById('loading').style.height = document.body.clientHeight + '
 
 window.onresize = () => { 
  
-  document.querySelector('body::before').style.height = document.body.clientHeight + 'px'; 
+  document.getElementById('lightBg').style.height = document.body.clientHeight + 'px'; 
  
   document.getElementById('loading').style.height = document.body.clientHeight + 'px'; 
    
