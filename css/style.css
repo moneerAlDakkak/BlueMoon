@@ -890,7 +890,6 @@ footer a {
     height: 400px;
     border-radius: 15px;
     margin: 20px 0;
-    padding: 10px;
     text-align: center;
     box-shadow: 0px 2px 3px 1px #00000066 ;
     overflow: hidden;
@@ -901,11 +900,10 @@ footer a {
 }
 
 #soon > div:last-of-type {
-    height: 66%;
-    margin: 2% 0;
+    height: 68%;
+    padding: 10px;
 }
 
 #soon h2, #soon h5 {
     line-height: 1em;
 }
-
