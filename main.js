@@ -47,14 +47,15 @@ lastName.setAttribute('class', 'lastName');
 */
 
 
-
-// to fit the light background in the right high :
+// to fit the light background in the right high
 
 window.onresize = () => { 
  
   document.getElementById('lightBg').style.height = document.body.clientHeight + 'px'; 
    
 }
+
+
 
 
 
@@ -72,7 +73,8 @@ function loading() {
 
 }
 
-setTimeout(loading, 6000);
+setTimeout(loading, 5000);
+
 
 
 
