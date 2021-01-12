@@ -888,7 +888,7 @@ footer a {
     height: 400px;
     border-radius: 15px;
     margin: 20px 0;
-    padding: 10px;
+    padding: 10px 10px 20px;
     text-align: center;
     box-shadow: 0px 2px 3px 1px #00000066 ;
     overflow: hidden;
