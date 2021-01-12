@@ -895,8 +895,9 @@ footer a {
 }
 
 #soon div {
-	height: 30%
+    height: 30%;
 }
+
 #soon h2, #soon h5 {
     line-height: 1em;
 }
