@@ -69,7 +69,7 @@ code.full{
     max-width: 100%;
     overflow: auto;
     white-space: nowrap;
-    color: #939157;
+    color: #0D86D7;
 }
 
 .card code.full em {
@@ -79,7 +79,7 @@ code.full{
 }
 
 .card code.full span {
-    color: #C41477;
+    color: #C1068B;
     font: normal 1em/3em monospace;
 }
 
@@ -620,7 +620,7 @@ label {
     padding: 4px 10px;
     line-height: 3em;
     border: 2px solid var(--textcolor);
-    border-left: 5px solid var(--textcolor);
+    border-left: 8px solid var(--textcolor);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     font-weight: bold;
