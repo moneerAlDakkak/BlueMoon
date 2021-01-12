@@ -80,9 +80,8 @@ function loading() {
 
 }
 
-//setTimeout(loading, 0000);
+setTimeout(loading, 6000);
 
-window.onload = loading;
 
 
 
