@@ -47,11 +47,11 @@ lastName.setAttribute('class', 'lastName');
 */
 
 
-// to fit the light background in the right high
+// to fit the dark background in the right high
 
 window.onresize = () => { 
  
-  document.getElementById('lightBg').style.height = document.body.clientHeight + 'px'; 
+  document.getElementById('darkBg').style.height = document.body.clientHeight + 'px'; 
    
 }
 
@@ -85,11 +85,11 @@ function themeSwitch() {
     
     "use strict";
     
-    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
     
     document.querySelector('header button span').classList.toggle('theme-switch');
 
-    document.querySelector('#lightBg').style.height = document.body.clientHeight + 'px';
+    document.querySelector('#darkBg').style.height = document.body.clientHeight + 'px';
 
 }
 
