@@ -10,30 +10,28 @@ html {
 }
 
 body{
-    --cardcolor: #1c2e4a;
-    --accentcolor: #ffe264;
-    --textcolor: #fff;
-    --xtextcolor: #fff;
-    --highlight: #01071b42;
-    background: rgb(28,46,74);
-    background: linear-gradient(93deg, rgba(28,46,74,1) 0%, rgba(1,15,34,1) 100%);
-	  color: var(--textcolor);
+    --cardcolor: #e2e2e2;
+    --accentcolor: #307ac3;
+    --textcolor: #38464f;
+    --highlight: #29292914;
+    background: rgb(222, 236, 236);
+    background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
+	color: var(--textcolor);
     font-family: "Poppins";
     margin: 0;
 }
 
-.light-mode {
-    --cardcolor: #e2e2e2;
-    --accentcolor: #307ac3;
-    --textcolor: #38464f;
-    --xtextcolor: #38464f;
-    --highlight: #29292914;
+.dark-mode {
+    --cardcolor: #1c2e4a;
+    --accentcolor: #ffe264;
+    --textcolor: #fff;
+    --highlight: #01071b42;
 }
 
 
-#lightBg {
-    background: rgb(222,236,236);
-    background: linear-gradient(90deg, rgba(222,236,236,1) 0%, rgba(195,206,219,1) 100%); 
+#darkBg {
+    background: rgb(28, 46, 74);
+    background: linear-gradient(93deg, rgba(28, 46, 74, 1) 0%, rgba(1, 15, 34, 1) 100%);
     z-index: -1;
     position: absolute;
     top: 0;
@@ -43,7 +41,7 @@ body{
     transition: opacity .5s linear;
 }
 
-.light-mode #lightBg {
+.dark-mode #darkBg {
     opacity: 1;
 }
 
@@ -119,8 +117,8 @@ h6 {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(28,46,74);
-    background: linear-gradient(93deg, rgba(28,46,74,1) 0%, rgba(1,15,34,1) 100%);
+    background: rgb(222, 236, 236);
+    background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
     transition: opacity 1s ease
 }
 
@@ -142,23 +140,24 @@ h6 {
 .first-ring {
     width: 140px;
     height: 140px;
-    animation: rotate1 4s infinite linear;
-    box-shadow: 0px 0px 4px 2px #ffe264;
+    animation: rotate2 2s infinite linear;
+    box-shadow: 0 0 2px 2px var(--accentcolor);
 }
 
 .second-ring {
     width: 140px;
     height: 140px;
-    animation: rotate2 4s infinite linear;
-    box-shadow: 0px 0px 4px 2px #307ac3;
+    animation: rotate1 2s infinite linear;
+    box-shadow: 0 0 2px 2px var(--accentcolor);
 }
 
 .third-ring {
     width: 140px;
     height: 140px;
-    animation: rotate3 4s infinite linear;
-    box-shadow: 0px 3px 4px 2px #ffffff;
+    animation: rotate3 2s infinite linear;
+    box-shadow: 0 0 2px 2px var(--accentcolor);
 }
+
 
 @keyframes rotate1 {
     
@@ -167,11 +166,11 @@ h6 {
   }
   
   50% {
-    transform: rotate3d(360, 360, 360, 360deg);
+    transform: rotate3d(180, 180, 180, 180deg);
   }
   
   100% {
-      transform: rotate3d(0);
+      transform: rotate3d(360, 360, 360, 360deg);
   }
   
 }
@@ -183,27 +182,28 @@ h6 {
   }
   
   50% {
-    transform: rotate3d(-360, -360, -360, 360deg);
+    transform: rotate3d(180, 180, 180, -180deg);
   }
   
   100% {
-    transform: rotate3d(0);
+    transform: rotate3d(360, 360, 360, -360deg);
   }
+  
   
 }
 
 @keyframes rotate3 {
     
   0% {
-    transform: rotate3d(0);
+      transform: rotate3d(0);
   }
   
   50% {
-    transform: rotateZ(360deg);
+      transform: rotate3d(-180, 180, -180, 180deg);
   }
   
   100% {
-      transform: rotate3d(0);
+      transform: rotate3d(-360, 360, -360, 360deg);
   }
   
 }
@@ -409,7 +409,7 @@ nav ul li a {
     position: relative;
     height: 400px;
     text-align: left;
-    color: var(--xtextcolor);
+    color: var(--textcolor);
     padding: 10px;
     display: flex;
     flex-flow: column nowrap;
@@ -907,3 +907,4 @@ footer a {
 #soon h2, #soon h5 {
     line-height: 1em;
 }
+
