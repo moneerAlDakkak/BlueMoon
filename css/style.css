@@ -762,6 +762,17 @@ footer a {
 
 /*~~~~~~~~~~~~///Media Queries/// //////////////////////////////////////////////////////////////////////////////////////////*/
 
+@media (max-width: 450px) {
+    footer .contact-us {
+        flex-flow: column nowrap;
+    }
+    
+    footer .contact-us > div {
+        margin: 0 auto
+    }
+}
+
+
 @media (min-width: 1400px) {
   .first-container {
     width: 90%;
