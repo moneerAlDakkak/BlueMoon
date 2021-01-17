@@ -92,18 +92,6 @@ h6 {
 }
 
 
-@font-face {
-    font-family: poppins;
-    src: url('../fonts/poppins.ttf')
-}
-
-@font-face {
-    font-family: rancho;
-    src: url('../fonts/rancho.ttf')
-}
-
-
-
 
 
 /* 2) loading window
