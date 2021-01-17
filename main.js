@@ -73,7 +73,7 @@ function loading() {
 
 }
 
-setTimeout(loading, 5000);
+setTimeout(loading, 2000);
 
 
 
