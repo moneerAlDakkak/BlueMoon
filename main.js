@@ -1,50 +1,24 @@
-/*global document*/
-/*jslent plusplus: true*/
+
+import * as all from './section-one.js';
+
+all.data();
+all.concati();
+all.condition();
+all.output();
+all.func();
+all.loop();
+all.regular();
+all.array();
+all.string();
+all.date();
+all.event();
+all.math();
+
+
 /* exported themeSwitch showCards backButtonFunc coloring*/
 
 
-/*
-<div class="logo">
 
-  
-
-              <div class="restName">
-                <span>oneer</span>
-              </div>
-  
-              <span class="lastName"> Al-Dakkak </span>
-             
-        </div>
-*/
-/*
-
-const logo = document.createElement('div'),
-      restName = document.createElement('div'),
-      restSpan = document.createElement('span'),
-      lastName = document.createElement('span'),
-      restText = document.createTextNode('oneer'),
-      lastText = document.createTextNode('Al-Dakkak');
-      
-
-lastName.appendChild(lastText);
-
-restSpan.appendChild(restText);
-
-restName.appendChild(restSpan);
-
-logo.appendChild(restName);
-
-logo.appendChild(lastName);
-
-document.querySelector('.header-grid').insertBefore(logo, document.querySelector('button[title="Change theme"]'));
-
-logo.setAttribute('class', 'logo');
-
-restName.setAttribute('class', 'restName');
-
-lastName.setAttribute('class', 'lastName');
-
-*/
 
 
 // to fit the dark background in the right high
@@ -53,7 +27,7 @@ window.onresize = () => {
  
   document.getElementById('darkBg').style.height = document.body.clientHeight + 'px'; 
    
-}
+};
 
 
 
@@ -71,11 +45,10 @@ function loading() {
 
   document.getElementById('loading').style.opacity = '0';
 
-}
-
-setTimeout(loading, 2000);
+};
 
 
+window.onload = loading
 
 
 
@@ -83,7 +56,7 @@ setTimeout(loading, 2000);
 
 function themeSwitch() {
     
-    "use strict";
+    'use strict';
     
     document.body.classList.toggle('dark-mode');
     
@@ -95,13 +68,9 @@ function themeSwitch() {
 
 
 
-
-
-
-
 // See that drop menu in header ? 
 
-function dropDown() {
+function dropMenu() {
   
   'use strict';
   
@@ -121,8 +90,6 @@ function dropDown() {
   }
   
 }
-
-
 
 
 
@@ -196,37 +163,3 @@ function backFunction(backButton) {
     }
 }
     
-
-
-
-
-/*
-
-if (window.innerWidth <= 800 ) {
-
-  window.onscroll = function () {
-    
-    'use strict';
-    
-    var cards = document.querySelectorAll('.card'),
-        i;
-    
-    if (window.scrollY > 3750) {
-      
-      
-      
-    } else if (window.scrollY > 2500 && window.scrollY < 2920) {
-      
-      document.getElementById('selector1').classList.add('show')
-      
-    } else if (window.scrollY > 1200 && window.scrollY < 1500) {
-      
-      document.getElementById('data1').classList.add('show')
-      
-    }
-    
-  }
-
-}
-*/
-
