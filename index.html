@@ -4,16 +4,30 @@
     <head>
     
         <meta charset="UTF-8"/>
+        
         <meta name="description" content="basic beginner JavaScript skills "/>
-        <title>BlueMoon JS Project</title>
+        
+        <title>BlueMoon.js</title>
+        
         <meta name="viewport" content="width=device-width initial-scale=1"/>
+        
         <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/all.min.css"/>
+        
+        <link rel="stylesheet" href="css/responsive.css"/>
+        
+        <link rel="stylesheet" href="css/toArabic.css"/>
+        
         <link rel="icon" href="images/moon.png.jpg"/>
     
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        
         <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/6b67d8ceea.js" crossorigin="anonymous"></script>
         
     </head>
     	
@@ -38,7 +52,7 @@
             
           <div class="header-grid">
     
-            <div class="logo">
+            <div class="logo" o>
       
                   <div class="restName">
                     <span>oneer</span>
@@ -48,26 +62,28 @@
                  
             </div>
             
-            <button onclick="themeSwitch()" title="Change theme">
+            <button id="theme-switch" title="Change theme">
     
                 <span></span>
     
             </button>
               
-            <button onclick="dropMenu()">
+            <button id="drop-button">
                 <i class="fa fa-caret-down"></i>
             </button>
             
               <nav>
                 <ul>
-                  <li onclick="slideShow('to-slide-2')">Who am I ?</li>
+                  <li class="slideTitle" id="to-slide-2">Who am I ?</li>
                     
-                  <li onclick="slideShow('to-slide-3')">About project</li>
+                  <li class="slideTitle" id="to-slide-3">About project</li>
                     
                   <li onclick=" location.hash='footer' ">Contact us</li>
                     
-                    <li onclick=" location.href='https://moneeraldakkak.github.io/portfolio/' ">portfolio</li>
+                    <li onclick=" location.href='https://moneeraldakkak.github.io/portfolio/' ">My portfolio</li>
                 </ul>
+                
+                
                </nav>
               
             </div>
@@ -92,33 +108,25 @@
                     </div>
     
                     <div class="slide-me slide" id="me">
-                        <button onclick="slideShow('to-slide-1')">&lt;</button>
+                        <button>&lt;</button>
                         <div>
                             <img src="images/me.jpg" alt="a photo of me">
                         </div>  
                         <p>
-                            My name is Moneer Al-Dakkak.
-                            <br> I am 19 years old.
-                            <br> from Damascus, Syria.
-                            <br> I am a computer engineering student
-                            <br> and a front-end web developer.
-                            <br> <span>Hope you like my work !</span>
+                            My name is Moneer Al-Dakkak.<br> I am 19 years old. <br> from Damascus, Syria. <br> I am a computer engineering student <br> and a front-end web developer. <br> <span>Hope you like my work </span>
                         </p>
                   </div>
     
               <div class="slide-project slide">
-              <button onclick="slideShow('to-slide-1')">&lt;</button>
+              <button>&lt;</button>
               <div>
               <img src="images/moon.png.jpg" alt="blueMoon logo">
               </div>
               <p>
-              <span>BlueMoon JS</span> is a single web page where I try to give you all JavaScript beginner skills <br>
-              <span>Note</span> that this is not a JavaScript course it's just the notes you will need after you finish the course . <br>
-              In case you want a JavaScript course I recommend you the playlist I studied from <a href="https://www.youtube.com/playlist?list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh">Elzero web school</a>. <br>
-              thanks to <a href="https://www.facebook.com/OsElzero">Osama Mohamed</a> for his awesome youtube courses.
+              <span>BlueMoon JS</span> is the first of the BlueMoon series which works on simplifying science and put it in one organized place. <br><span>Note :</span> we are here considering that you have already took a Js course and you wanna see all the informations you studied in one place.<br> If that is not the case I will recommend you (for Arab visitors) the <a href="https://www.youtube.com/playlist?list=PLDoPjvoNmBAw6p0z0Ek0OjPzeXoqlFlCh">Elzero web school</a> courses. <br>thanks to <a href="https://www.facebook.com/OsElzero">Osama Mohamed</a> for his awesome youtube courses.
               </p>
               </div>
-    
+    <!-- now this place wan not so organized to easily edit it in Js-->
               </div>
     
            </div>
@@ -131,51 +139,51 @@
                 
                 <ul class="menu menu1">
                   
-                  <li id="data">
+                  <li data-topic="data" id="T-data">
                     Variables and Data types
                   </li>
                   
-                  <li id="concat">
+                  <li data-topic="concati" id="T-concati">
                     Concatenation
                   </li>
                   
-                  <li id="output">
+                  <li data-topic="output" id="T-output">
                       Output
                   </li>
                   
-                  <li id="condition">
+                  <li data-topic="condition" id="T-condition">
                     Conditions
                   </li>
                   
-                  <li  id="function">
+                  <li  data-topic="func" id="T-func">
                     Functions
                   </li>
                   
-                  <li id="event">
+                  <li data-topic="event" id="T-event">
                     Events
                   </li>
                   
-                  <li id="loop">
+                  <li data-topic="loop" id="T-loop">
                      Loops
                   </li>
                   
-                  <li id="regular">
-                    Regular Exspanssion
+                  <li data-topic="regular" id="T-regular">
+                    Regular Expression
                   </li>
                   
-                  <li id="math">
+                  <li data-topic="math" id="T-math">
                     Maths, Numbers, and Operators
                   </li>
                   
-                  <li id="array">
+                  <li data-topic="array" id="T-array">
                     Array
                   </li>
                   
-                  <li id="string">
+                  <li data-topic="string" id="T-string">
                     String
                   </li>
     
-                  <li id="date">
+                  <li data-topic="date" id="T-date">
                     Date
                   </li>
                   
@@ -185,50 +193,50 @@
     
             <section class="content"> <h6>.</h6>
     
-                <div class="card card1 data1" id="data1">
+                <div class="card card1" id="data">
     
                 </div>
                 
-                <div class="card card1 concat1" id="concat1">
+                <div class="card card1" id="concati">
     
                 </div>
                 
-                <div class="card card1 condition1" id="condition1">
+                <div class="card card1" id="condition">
     
                 </div>
                 
-                <div class="card card1 output1" id="output1">
+                <div class="card card1" id="output">
     
                 </div>
                 
-                <div class="card card1 function1" id="function1">
+                <div class="card card1" id="func">
     
                 </div>
                 
-                <div class="card card1 event1" id="event1">
+                <div class="card card1" id="event">
     
                 </div>
                 
-                <div class="card card1 loop1" id="loop1">
+                <div class="card card1" id="loop">
     
                 </div>
                 
-                <div class="card card1 regular1" id="regular1">
+                <div class="card card1" id="regular">
                 </div>
                 
-                <div class="card card1 math1" id="math1">
-    
-                </div>
-                
-                <div class="card card1 array1" id="array1">
+                <div class="card card1" id="math">
     
                 </div>
                 
-                <div class="card card1 string1" id="string1">
+                <div class="card card1" id="array">
+    
+                </div>
+                
+                <div class="card card1" id="string">
     
                 </div>
     
-                <div class="card card1 date1" id="date1">
+                <div class="card card1" id="date">
     
                 </div>
     
@@ -239,27 +247,27 @@
                 
                 <ul>
                   
-                  <li id="selector">
+                  <li data-topic="selector" id="T-selector">
                     Selectors
                   </li>
                   
-                  <li id="attribute">
+                  <li data-topic="attribute" id="T-attribute">
                     Attributes
                   </li>
                   
-                  <li id="classes">
+                  <li data-topic="classes" id="T-classes">
                     Classlist
                   </li>
                   
-                  <li id="create">
+                  <li data-topic="create" id="T-create">
                     Creating Nodes
                   </li>
                   
-                  <li id="dfunc">
+                  <li data-topic="dfunc" id="T-dfunc">
                     Dom Functions
                   </li>
                   
-                  <li id="styling">
+                  <li data-topic="styling" id="T-styling">
                     Styling & Dimensions
                   </li>
                   
@@ -269,356 +277,30 @@
     
             <section class="content"> <h6>.</h6>
     
-                <div class="card card2 selector1" id="selector1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>Selectors</h2>
-                      </div>
-    
-                        <label>Getting/Setting Elements in Document </label>
-                        everything listed here is written after the word document :
-                        <ul>
-                            <li>
-                                <code>.getElementById("id")</code>
-                            </li>
-                            <li>
-                                <code>.getElementsByClassName("class")</code>
-                            </li>
-                            <li>
-                              <code>.getElementsByTagName('tag')</code>
-                            </li>
-                            <li>
-                                <code>.querySelector/All('selector')</code>
-                            </li>
-                            <li>
-                              Finding Elements as Objects :
-                              <ul>
-                                <li><code>.title</code></li>
-                                <li><code>.body</code></li>
-                                <li><code>.images</code></li>
-                                <li>
-                                  <code>.forms</code>
-                                  <code class="full">
-                                  <em>/* the following code will get the value of the input with name="z1" in the first form */</em>
-                                  
-                                  document.forms[0].z1.value
-                                  </code>
-                                </li>
-                                <li><code>.anchors</code> : anchors are the a tags without href attribute</li>
-                                <li>
-                                  <code>.links</code> : links are the a tags with href attribut
-                                </li>
-                                <li>
-                                  <code>myDiv.children</code> : Element children only <br>
-                                * you can know the number of these Elements with : <code>document.childElementCount</code>
-                                </li>
-                                <li>
-                                  <code>myDiv.childNodes</code> : all child Nodes including text and comments
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              <code>.firstElementChild</code> / <code>.lastElementChild</code> : Elements only
-                            </li>
-                            <li>
-                              <code>.firstChild</code> / <code>.lastChild</code> : for Nodes
-                            </li>
-                            <li>
-                              <code>.parentElement</code> / <code>.parentNode</code>
-                            </li>
-                            <li>
-                              <code>.nextSibling</code> / <code>.nextElementSibling</code>
-                              </li>
-                            <li>
-                              <code>.spanviousSibling</code> / <code>.spanviousElementSibling</code></li>
-                        </ul>
-                        <label>
-                        getting/setting element content
-                        </label>
-                        <ul>
-                            <li><code>.innerHTML</code> : <br>
-                                gets/sets the entire content of the Element including children Elements
-                            </li>
-                            <li><code>.textContent</code> : <br>
-                                gets/sets only the text inside the Element
-                            </li>
-                        </ul>
-                        <label>
-                        Nodes (name and type)
-                        </label>
-                        <table>
-                          <tr>
-                            <td><code>.nodeName</code></td>
-                            <td><code>.nodeType</code></td>
-                          </tr>
-                          <tr>
-                            <td>Element</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>attribute</td>
-                            <td>2</td>
-                          </tr>
-                          <tr>
-                            <td>text</td>
-                            <td>3</td>
-                          </tr>
-                          <tr>
-                            <td>comment</td>
-                            <td>8</td>
-                          </tr>
-    
-                        </table>
-                    </article>
+                <div class="card card2" id="selector">
+                    
+                </div>
+
+                <div class="card card2" id="attribute">
+                    
+                </div>
+ 
+                <div class="card card2" id="classes">
+                    
                 </div>
     
-                <div class="card card2 attribute1" id="attribute1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>Attributes</h2>
-                      </div>
-                        <label>
-                          Getting/Setting Attributes
-                        </label>
-                        <ul>
-                          <li>
-                            <code>myElement.attribute.value</code>
-                          </li>
-                          <li>
-                            <code>myElement.getAttribute('attr')</code>
-                          </li>
-                          <li>
-                            <code>myElement.setAttribute('attr', 'value')</code> <br>
-                            *.setAttribute creates the attribute (attr) if it doesn't exist in the first place.
-                          </li>
-                        </ul>
-                        <label>
-                          removing/checking attribues
-                        </label>
-                        <ul>
-                          <li>
-                            <code>myElement.hasAttribute('attr')</code> : to check if the element has the attribute (attr) or not
-                          </li>
-                          <li>
-                            <code>.removeAttribute('attr')</code> : to remove the attribute (attr)
-                          </li>
-                        </ul>
-                    </article>
-                </div>
-                <div class="card card2 classes1" id="classes1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>Classlist</h2>
-                      </div>
-    
-                        <code>myElement.classlist</code> :  a method that gives the classes of the element(myElement) as an Array. <br>
-                        <label>
-                        .classlist methods
-                        </label>
-                        <ul>
-                          <li>
-                            <code>.contains('class1')</code> : to check if the element has the class (class1) or not
-                          </li>
-                          <li>
-                            <code>.length</code> : to check how many classes the Element has
-                          </li>
-                          <li>
-                            <code>.item(n)</code> : to get the class number (n+1) in the classlist (zero based index)
-                          </li>
-                          <li>
-                            <code>.add('class1')</code> : equals to (element.className += class1)
-                          </li>
-                          <li><code>.remove('class1')</code></li>
-                          <li>
-                            <code>.toggle('class1')</code> : adds and removes the class1
-                          </li>
-                        </ul>
-                    </article>
-                </div>
-    
-                <div class="card card2 create1" id="create1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>Creating Nodes with Js</h2>
-                        </div>
-    
-                        <ul>
-                          <li>
-                            Creating Element :
-                            <code>document.createElement('div')</code>
-                            </li>
-                          <li>
-                            Creating text : 
-                            <code>document.createTextNode('text')</code>
-                          </li>
-                          <li>
-                            Creating Comment :
-                            <code>document.createComment('comment')</code>
-                          </li>
-                          <li> 
-                          inserting the created Elements :
-                          <ul>
-                            <li>
-                              <code>parentElement.appendChild(childElement)</code>
-                              </li>
-                            <li>
-                              <code>nextElement.insertBefore(createdElement)</code>
-                            </li>
-                          </ul>
-                          </li>
-                          <li>
-                            Creating and Setting Attribute :
-                            <br> <code class="full">
-                                myAttr = document.createAttribute('<span>attr</span>'); <br>
-                            myAttr.value = <span>value1</span>; <br>
-                            myElement.setAttributeNode(<span>myAttr</span>);
-                            <em>/* you can also use <code>setAttribute()</code> instead */</em>
-                            </code>
-                          </li>
-                        </ul>
-                    </article>
+                <div class="card card2" id="create">
+                    
                   </div>
     
-                  <div class="card card2 dfunc1" id="dfunc1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>Dom Functions</h2>
-                      </div>
-    
-                        <ul>
-    
-                          <li>
-                            <code>.addEventListener('myEvent', myfunction())</code> : to add the event (myEvent) on the selected element.
-                          </li>
-    
-                          <li>
-                            <code>.click()</code> : spanforms the click event on the selected element.
-                          </li>
-    
-                          <li>
-                            <code>.focus()</code> / <code>.blur()</code> : focuses / blures the selected element.
-                          </li>
-    
-                          <li>
-                            <code>.cloneNode(true / false)</code> : to clone the selected element and then use insert before or append child to place it.
-                          </li>
-                          <li>
-                            <code>myMain.contains(myChild)</code> : to check if the element myChild is contained in the element myMain or not.
-                          </li>
-                          <li>
-                            <code>.preventDefault()</code> : to prevent the default action of an Element 
-                            
-                            <code class="full">
-                                <em>/* the following function will disable the contextmenu: */</em>
-                                
-                                document.oncontextmenu = function (<span>e</span>) { <br>
-                                &nbsp; &nbsp;
-                                e.preventDefault(); <br>
-                                }
-                                </code>
-                            
-                          </li>
-                        </ul>
-    
-                   </article>
+                  <div class="card card2" id="dfunc">
+                    
                 </div>
     
-                <div class="card card2 styling1" id="styling1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-    
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>
-                          Styling & Dimensions
-                        </h2>
-    
-                      </div>
-    
-                        <label>Styling </label>
-    
-                        myElement.style.property = 'value' ; <br>
-    
-                        <label>
-                          (client/offset/scroll) Dimensions
-                        </label>
-    
-                        here is a quick comparison between :
-                        <ul>
-                          <li>
-                            <code>.clientHeight</code> / <code>.clientWidth</code>
-                          </li>
-                          <li>
-                            <code>.scrollHeight</code> / <code>.scrollWidth</code>
-                          </li>
-                          <li>
-                            <code>.offsetHeight</code> / <code>.offsetWidth</code>
-                          </li>
-                        </ul>
-                        <table>
-    
-                          <tr>
-                            <td></td>
-                            <td>client</td>
-                            <td>scroll</td>
-                            <td>offset</td>
-                          </tr>
-                          <tr>
-                            <td>content</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td>scrollable <br> hidden content</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                            <td>No</td>
-                          </tr>
-                          <tr>
-                            <td>padding</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td>border</td>
-                            <td>No</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td>scroll bar</td>
-                            <td>No</td>
-                            <td>No</td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td>margin</td>
-                            <td>No</td>
-                            <td>No</td>
-                            <td>No</td>
-                          </tr>
-                        </table>
-    
-                    </article>
+                <div class="card card2" id="styling">
+                    
                 </div>
+                
             </section>
     
             <aside class="menu menu3">
@@ -627,27 +309,27 @@
                 
                 <ul>
                   
-                  <li id="window_st">
+                  <li data-topic="window1" id="T-window1">
                     window <br> (Alerts / Scrolls / Timing)
                   </li>
                   
-                  <li id="window_nd">
+                  <li data-topic="window2" id="T-window2">
                     window <br> (Links and Sub-windows)
                   </li>
                   
-                  <li id="history">
+                  <li data-topic="history" id="T-history">
                     history
                   </li>
                   
-                  <li id="screen">
+                  <li data-topic="screen" id="T-screen">
                     screen
                   </li>
                   
-                  <li id="navigator">
+                  <li data-topic="navigator" id="T-navigator">
                     navigator
                   </li>
                   
-                  <li id="cookie">
+                  <li data-topic="cookie" id="T-cookie">
                     Cookies
                   </li>
                   
@@ -657,296 +339,28 @@
     
             <section class="content"> <h6>.</h6>
     
-                <div class="card card3 window_st" id="window_st1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-    
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>
-                          window (Alerts/Scrolls/Timing)
-                        </h2>
-    
-                      </div>
-    
-                        window is the default object in Js which means that you don't have to write it when using window methods. 
-                        <ol>
-                          <li>
-                            <label>
-                              Page Alerts
-                            </label>
-                            <ul>
-                              <li><code>alert('')</code></li>
-                              <li>
-                                <code>confirm('')</code> : returns boolean value
-                                </li>
-                              <li>
-                                <code>prompt('', 'default text')</code> : returns a string that contains what is written in prompt text field
-                                </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <label>
-                              Timing methods
-                            </label>
-        
-                            <ul>
-                              <li>
-                                <code>setTimeout(myFunction, time)</code> : waits the time (in ms) before performing the function (myFunction)
-                              </li>
-                              <li>
-                                <code>clearTimeout(mySet)</code> : to cancel a Timeout and the function it performs (after storing setTimeout in a variable)
-                              </li>
-                              <li>
-                                <code>setInterval(myFunction, time)</code> : 
-                                repeats the function every time the chosen time (in ms) ends
-                              </li>
-                              <li>
-                                <code>clearInterval(mySet)</code> : to stop an Interval   and stop repeating the function it performs (after storing setInterval in a variable)
-                                </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <label>
-                              Scrolls
-                            </label>
-                           <ul>
-                             <li>
-                               <code>scrollBy(x,y)</code>
-                               * x and y can take negative values here to start slicing from the end of the string
-                             </li>
-                             <li>
-                               <code>scrollTo(x,y)</code>
-                             </li>
-                             <li>
-                               <code>scrollX</code> / <code>pageXOffset</code> : gets you the scroll amount on X
-                             </li>
-                             <li>
-                               <code>scrollY</code> / <code>pageYOffset</code> : gets you the scroll amount on Y
-                             </li>
-        
-                             <li>
-                              here is a quick comparison between
-                               <code>innerWidth</code> / <code>innerHeight</code> and <code>outerWidth</code> / <code>outerHeight</code>
-                               </li>
-                           </ul>
-                          </li>
-                          <li>
-                            <label>
-                              Dimensions
-                            </label>
-         
-                                innerWidth/inner Height and outerWidth/outerHeight
-                                here is a comparison between them : <br>
-         
-                                <img src="images/windowDim.jpg" alt="comparison"/>
-                          </li>
-                        </ol>
-                    </article>
+                <div class="card card3" id="window1">
+                    
                 </div>
     
-                <div class="card card3 window_nd" id="window_nd1">
-                    <article class="card-ltr">
-    
-                        <div class="h2titles">
-                          <button class="back-button">&lt;</button>
-    
-                          <h2>
-                            window (Links and Sub-windows)
-                          </h2>
-    
-                        </div>
-    
-                        <ol>
-                          <li>
-                            <label>
-                                .open
-                            </label>
-                            opens a new window .<br>
-                            Syntax : <code>window.open("url", "name/attribute", "specs", "history replace")</code>
-                            <ul>
-                              <li>url</li>
-                              <li>
-                                name : to refer to the opened window
-                              </li>
-                              <li>
-                                attribute : <code>_blank</code> , <code>_self</code>, etc...
-                              </li>
-                              <li>
-                                specs : width, height, left/right/top/down, menubar(yes/no), status(yes/no) <br>
-                              </li>
-                              <li>
-                                history replace: true or false inside the quotes. <br>
-                                Example :
-                                <code class="full">
-                                    window.open('<span>https://www.google.com', '_blank</span>', '<span>width=500</span>,<span>menubar=yes</span>', '<span>true</span>')
-                                </code>
-                              </li>
-                            </ul>    
-                          </li>
-                          <li>
-                            <label>.location</label>
-                            <ul>
-                              <li>
-                                <code>.href</code> : gets/sets the entire page link
-                              </li>
-                              <li>
-                                <code>.host</code> : gets/sets the page host only
-                              </li>
-                              <li>
-                                <code>.hash</code> : gets/sets the hashtag in the link
-                              </li>
-                              <li>
-                                <code>.protocol</code> : gets/sets the protocol of the page
-                              </li>
-                              <li>
-                                <code>.hostname</code>
-                              </li>
-                              <li>
-                                <code>.pathname</code> : gets/sets the path of the page inside the website
-                              </li>
-                              <li>
-                                <code>.search</code>
-                                <code class="full">
-                                    <em>/* This code will give the full link of the page you are in : */</em>
-                                    console.log(<span>location.hostname</span> + <span>location.pathname</span> + <span>location.search</span>)
-                                </code>
-                              </li>
-                              
-                              <li>
-                                <code>.replace('link1')</code> : takes the user to the page with the link1 and replaces the spanvious page in history
-                              </li>
-                              <li>
-                                <code>.assign('link1')</code> : takes the user to the page with the link1 and doesn't replace the spanvious page in history
-                              </li>
-                              <li>
-                                <code>.reload(true / false)</code> : reloads the page from server(true) or from cache(false)
-                              </li>
-                            </ul>
-                          </li>
-                        </ol>
-                    </article>
+                <div class="card card3" id="window2">
+                    
                 </div>
     
-                <div class="card card3 history" id="history1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>
-                          history
-                        </h2>
-                      </div>
-    
-                      <ul>
-                        <li>
-                          <code>.back()</code> : takes thee user to the spanvious page in history
-                        </li>
-                        <li>
-                          <code>.forward()</code> :  takes thee user to the next page in history
-                        </li>
-                        <li>
-                          <code>.go(n)</code> : takes the user n pages forward (n &gt; 0) or backwards(n &lt; 0)
-                        </li>
-                      </ul>
-    
-                    </article>
+                <div class="card card3" id="history">
+                    
                 </div>
     
-                <div class="card card3 screen" id="screen1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>
-                          screen
-                        </h2>
-                      </div>
-    
-                        <ul>
-                          <li><code>.width</code></li>
-                          <li><code>.height</code></li>
-                          <li>
-                            <code>.availWidth</code> : available screen width without the operating system interface
-                          </li>
-                          <li>
-                            <code>.availHeight</code> : available screen height without the operating system interface
-    
-                          </li>
-                          <li><code>.colorDepth</code> / <code>.pixelDepth</code></li>
-                        </ul>
-    
-                    </article>
+                <div class="card card3" id="screen">
+                    
                 </div>
     
-                <div class="card card3 navigator" id="navigator1">
-                  <article class="card-ltr">
-    
-                    <div class="h2titles">
-                      <button class="back-button">&lt;</button>
-    
-                      <h2>
-                        navigator
-                      </h2>
-                    </div>
-    
-                    gives informations about the browser the user uses .
-    
-                    <ul>
-                      <li><code>.appCodeName</code></li>
-                      <li><code>.appName</code></li>
-                      <li><code>.appVersion</code></li>
-                      <li><code>.platform</code></li>
-                      <li><code>.cookieEnabled</code></li>
-                      <li><code>.language</code></li>
-                      <li><code>.online</code></li>
-                      <li><code>.product</code></li>
-                    </ul>
-    
-                  </article>
+                <div class="card card3" id="navigator">
+                  
               </div>
     
-              <div class="card card3 cookie" id="cookie1">
-                    <article class="card-ltr">
-    
-                      <div class="h2titles">
-                        <button class="back-button">&lt;</button>
-    
-                        <h2>
-                          Cookies
-                        </h2>
-                      </div>
-    
-                      <ol>
-                        <li>
-                          <label>Creating</label>
-                          <code class="full">
-                          document.cookie = " <span>name=name1</span>; <span>expires=Date1; path=/</span> ";
-                          </code>
-                          <ul>
-                            <li><code>name</code> : the name of the cookie (can be any name)</li>
-                            <li><code>expires</code> : a date when the cookie expires (as explained in date section)</li>
-                            <li><code>path</code> : the path where the cookie makes effect (the path in the example makes effect on all the website)</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <label>Modifying</label>
-                          <ul>
-                            <li>To modify a cookie name value we rewrite the cookie with the new value</li>
-                            <li>To modify a cookie date we rewrite the cookie with the new date</li>
-                            <li>We can't modify a cookie path because that will create another cookie with the same name instead</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <label>Deleting</label>
-                          To delete a cookie we modify its expiration date to some date in the past
-                        </li>
-                      </ol>
-                      
-                    </article>
+              <div class="card card3" id="cookie">
+                    
                 </div>
               </section>
     
@@ -967,8 +381,7 @@
     <footer id="footer">
     
       <div class="message">
-        I hope you found this helpful. if you did, don't forget to show some support in order to see more of this content. <br>
-        And remember there always will be new ideas !
+        I hope you found this helpful. if you did, don't forget to show some support in order to see more of this content.
         </div>
       
       <div class="contact-us">
@@ -986,7 +399,7 @@
           <a href="https://www.linkedin.com/in/moneer-al-dakkak-2534511b3" target="_blank">Moneer Al-Dakkak</a>
         </div>
         <div>
-          <h5>Or Follow the project</h5>
+          <h5>Follow the project</h5>
           
           <i class="fab fa-facebook"></i>
     
@@ -1004,12 +417,22 @@
       <div class="message">
         This page has been created by me for months of studying, writing content and designing consedering every small detail. <br> released on January/2021 for the mark BlueMoon.
       </div>
+      <div>
+        <button id="lang-ar">Ar</button> | <button id="lang-en">En</button>
+      </div>
     </footer>
     
     </div>
-    
-        <script src="main.js" type="module"></script>
-        <script src="content.js" type="module"></script>
+        
+      <script src="Js/English/content-one.js" type="module"></script>
+
+      <script src="Js/English/content-two.js" type="module"></script>
+      
+      <script src="Js/English/content-three.js" type="module"></script>
+      
+      <script src="Js/translate.js" type="module"></script>
+      
+      <script src="main.js" type="module"></script>
         
     </body>
     	
