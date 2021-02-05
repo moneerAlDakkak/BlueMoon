@@ -1,0 +1,42 @@
+/* Arabic Site :
+*/
+
+html[lang="ar"] .container, html[lang="ar"] .slideshow-father, html[lang="ar"] footer {
+  direction: rtl;
+}
+
+html[lang="ar"] .card {
+  direction: ltr;
+}
+
+html[lang="ar"] .card-ltr {
+  direction: rtl;
+}
+
+html[lang="ar"] .card {
+  border-left: none;
+  border-right: 20px solid black;
+  transform: translateX(20px)
+}
+
+html[lang="ar"] .to-slide-2 {
+    transform: translateX(33.3%)
+}
+
+html[lang="ar"] .to-slide-3 {
+    transform: translateX(66.6%)
+}
+
+html[lang="ar"] .slide button {
+  right: 10px;
+  left: auto;
+}
+
+
+html[lang="ar"] body, html[lang="ar"] ul {
+  font-family: "Cairo"
+}
+
+html[lang="ar"] code.full {
+  direction: ltr
+}
