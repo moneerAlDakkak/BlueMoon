@@ -1,165 +1,145 @@
+import {translatePageTo} from './Js/translate.js';
 
-import * as all from './section-one.js';
-
-all.data();
-all.concati();
-all.condition();
-all.output();
-all.func();
-all.loop();
-all.regular();
-all.array();
-all.string();
-all.date();
-all.event();
-all.math();
-
-
-/* exported themeSwitch showCards backButtonFunc coloring*/
-
-
-
-
-
-// to fit the dark background in the right high
-
-window.onresize = () => { 
- 
-  document.getElementById('darkBg').style.height = document.body.clientHeight + 'px'; 
-   
-};
-
-
-
-
-
-
-
-// to hide the loading page :
-
-function loading() {
-
-  'use strict';
-
-  document.getElementById('loading').style.zIndex = '-2';
-
-  document.getElementById('loading').style.opacity = '0';
-
-};
-
-
-window.onload = loading
-
-
-
-// The very cool theme changer :
-
-function themeSwitch() {
-    
-    'use strict';
-    
-    document.body.classList.toggle('dark-mode');
-    
-    document.querySelector('header button span').classList.toggle('theme-switch');
-
-    document.querySelector('#darkBg').style.height = document.body.clientHeight + 'px';
-
-}
-
-
-
-// See that drop menu in header ? 
-
-function dropMenu() {
+export function gettingPageReady() {
   
   'use strict';
+
+  // The very cool theme changer :
   
-  var header = document.querySelector('header');
-  
-  document.querySelector('button[onclick="dropDown()"]').classList.toggle('rotate90');
-  
-  header.classList.toggle('full-height-header');
-  
-  if(header.classList.contains('full-height-header')){
+  document.getElementById('theme-switch').onclick =_=> {
+    
+      'use strict';
       
-    header.style.height = header.scrollHeight + 'px'
-    
-  } else {
-    
-    header.style.height = document.querySelector('.logo').offsetHeight + 70 + 'px';
+      document.body.classList.toggle('dark-mode');
+      
+      document.querySelector('header button span').classList.toggle('theme-switch');
+  
   }
   
-}
-
-
-
-
-//the slideshow movements :
-
-function slideShow(slide) {
   
-  'use strict';
   
-  document.getElementById('slideshow').className ='';
   
-  document.getElementById('slideshow').classList.add(slide);
+  // See that drop menu in header ? 
   
-}
+  document.getElementById('drop-button').onclick =_=> {
+    
+    let header = document.querySelector('header');
+    
+    document.getElementById('drop-button').classList.toggle('rotate90');
+    
+    header.classList.toggle('full-height-header');
+    
+    if(header.classList.contains('full-height-header')){
+        
+      header.style.height = header.scrollHeight + 'px'
+      
+    } else {
+      
+      header.style.height = document.querySelector('.logo').offsetHeight + 70 + 'px';
+    }
+    
+  }
+  
+  
+  
+  
+  //the slideshow movements :
+  
+  document.querySelectorAll('.slideTitle').forEach(function (title) {
+    
+    title.onclick = function () {
+      
+      document.getElementById('slideshow').className = '';
+      
+      document.getElementById('slideshow').classList.add(this.getAttribute('id'));
+      
+    } 
+    
+  });
+  
+  //the slideshow back buttons :
+  
+  document.querySelectorAll('.slide button').forEach((slideBackButton) => {
+    
+    slideBackButton.onclick =_=> {
+    
+      document.getElementById('slideshow').className = '';
+      
+      document.getElementById('slideshow').classList.add('to-slide-1');
+    }
+  });
 
 
 
+  // All functions that will be performed on window's load :
 
-
-
-
-// showing and hiding cards :
-
-var cardTitles = document.querySelectorAll('aside ul li'),
+  let backs = document.querySelectorAll('.back-button'),
+  
+  cardTitles = document.querySelectorAll('aside ul li'),
+  
     cards = document.querySelectorAll('.card'),
+    
     i;
-
-cardTitles.forEach(showCards);
-
-function showCards(cardTitle) {
     
-    'use strict';
+  // back buttons need this to function : 
+   
+  backs.forEach(backFunction);
+      
+  function backFunction(backButton) {
+          
+      backButton.onclick = function () {
+              
+          this.parentElement.parentElement.parentElement.classList.remove('show')
+              
+      }
     
-    cardTitle.onclick = function () {
-        
-        for (i = 0; i < cards.length; i = i + 1) {
-            
+  }
+  
+  // Cards showing on titles pressing :
+  
+  cardTitles.forEach(showCards);
+  
+  function showCards(cardTitle) {
+    
+    cardTitle.onclick = function() {
+  
+      for (i = 0; i < cards.length; i = i + 1) {
+  
         cards[i].classList.remove('show')
-        
-        }
-        
-        document.getElementById(this.getAttribute('id') + '1').classList.toggle('show');
-        
+  
+      }
+  
+      document.getElementById(this.getAttribute('data-topic')).classList.toggle('show');
+  
     }
-    
+  
+  }
+  
+  // The loading screen will fade : 
+  
+  function loading() {
+  
+    document.getElementById('loading').style.zIndex = '-2';
+    document.getElementById('loading').style.opacity = '0';
+  
+  }
+  
+  loading();
+  
+  //translation buttons getting ready :
+  
+  document.getElementById('lang-en').onclick =_=> { translatePageTo('en');
+  };
+  
+  document.getElementById('lang-ar').onclick =_=> { translatePageTo('ar');
+  };
+  
 }
 
-/* the for loop was necessary bcz you can't edit classList of all the elements at once*/
+
+
+window.addEventListener('load', gettingPageReady());
 
 
 
 
-
-
-
-//the back buttons need this to function :  
-
-var backs = document.querySelectorAll('.back-button');
-    
-backs.forEach(backFunction);
-    
-function backFunction(backButton) {
-        
-    'use strict';
-        
-    backButton.onclick = function () {
-            
-        backButton.parentElement.parentElement.parentElement.classList.remove('show')
-            
-    }
-}
-    
