@@ -4,7 +4,7 @@
 html[lang="ar"] .container, html[lang="ar"] .slideshow-father, html[lang="ar"] footer {
   direction: rtl;
 }
-
+/*
 html[lang="ar"] .card {
   direction: ltr;
 }
@@ -18,7 +18,7 @@ html[lang="ar"] .card {
   border-right: 20px solid black;
   transform: translateX(20px)
 }
-
+*/
 html[lang="ar"] .to-slide-2 {
     transform: translateX(33.3%)
 }
