@@ -88,7 +88,7 @@ function concati() {
     content = `
         <ul>
             <li>
-                concatenation is used to unit variables and strings in one sentence by using the "+" symbol
+                concatenation is used to unit variables in one sentence by using the "+" symbol
             </li>
             <li>
                 numbers are considered strings when concatenating with other strings and they will be put beside that string <br>
@@ -256,7 +256,7 @@ topic = 'func';
                         the return line says what the function gives when it is called
                     </li>
                     <li>
-                        params : we use params to include a variable in our function and define its value when we call the function not inside the 
+                        params : we use params to include a value in our function when we call the function not inside the 
                             function itself
                     </li>
                 </ul>
@@ -362,7 +362,7 @@ let title = document.getElementById('T-' + topic).textContent,
                 <label>for loop</label>
                 <code class="full">
                     for (<span>starting value</span>; <span>loop's condition</span>; <span>operation</span>) {
-                        <em>${tab} /* repeated assignment with an increasing value of i aslong the condition returns true */</em> }
+                        <em>${tab} /* repeated assignment with an increasing value of i aslong as the condition is implemented */</em> }
                 </code>
                 Example :
                 <code class="full">
@@ -379,7 +379,7 @@ let title = document.getElementById('T-' + topic).textContent,
             </li>
             <li>
                 <label>for in loop</label>
-                The for in loop deals with Objects as it applies the repeated assignment on the object properties
+                The for in loop deals with Objects as it applies the assignment on the object properties
                 <code class="full">
                     var myPhone = {<br>
                     ${tab} manufacturer: <span>samsung</span>,<br>
