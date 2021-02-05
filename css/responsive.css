@@ -30,9 +30,9 @@
 
 @media (max-width: 855px){ /*phone screens*/
   
-  .header-grid {
+  header {
     grid-template-columns: repeat(8, 10%) 5% 5% 5% 5%;
-    grid-template-rows: 60px auto;
+    grid-template-rows: 0px auto;
     grid-template-areas: 
     "logo logo . . . . . .  button1 . . button2"
     "nav nav nav nav nav nav nav nav nav nav nav nav";
@@ -42,29 +42,15 @@
   #drop-button {
         display: inline-block;
   }
-  
-   
-  .popups { 
-        position: absolute; 
-        flex-flow: column nowrap; 
-  } 
-   
-  .popups div, .popups p { 
-        text-align: center; 
-        margin: 10px auto; 
-        width: 100%; 
-  } 
-   
-  .popups:before {left: 47%} 
    
    
     nav { 
-        margin: 20px 0 0 0;
+        margin: 30px 0;
     } 
  
     nav ul { 
         width: 100%; 
-        padding: 0; 
+        padding: 10px; 
         display: flex; 
         flex-flow: row wrap; 
         justify-content: space-around 
@@ -82,14 +68,7 @@
         line-height: 1.3em 
     } 
      
-    .projectpop, .mepop { 
-        right: 0;
-        width: 80%; 
-    } 
-     
-    .projectpop {top: 280px} 
-    
-    .mepop {top: 215px}
+
      
     section { 
         height: 800px; 
