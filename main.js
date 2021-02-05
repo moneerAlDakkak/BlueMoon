@@ -140,4 +140,8 @@ export function gettingPageReady() {
 
 window.addEventListener('load', gettingPageReady());
 
-window.onresize =_=> document.querySelector('header').style.height = 0;
+window.onresize =_=> {
+    if(document.querySelector('header').classList.contains('full-height-header)) {
+        document.querySelector('header').classList.remove('full-height-header)
+    }
+}
