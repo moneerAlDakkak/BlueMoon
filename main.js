@@ -35,7 +35,7 @@ export function gettingPageReady() {
       
     } else {
       
-      header.style.height = document.querySelector('.logo').offsetHeight + 70 + 'px';
+      header.style.height = 0
     }
     
   }
@@ -140,6 +140,4 @@ export function gettingPageReady() {
 
 window.addEventListener('load', gettingPageReady());
 
-
-
-
+window.onresize =_=> document.querySelector('header').style.height = 0;
