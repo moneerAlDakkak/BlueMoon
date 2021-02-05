@@ -207,14 +207,20 @@ h6 {
 */
 
 header {
-    height: 120px;
-    padding: 30px 20px
+    height: 0;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: 160px calc(100% - 210px) 35px;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "logo nav button1";
+    align-items: center;
 }
 
 header, footer{
     position: relative;
     border-radius: 15px;
-    width:100%;
+    width: 100%;
     overflow: hidden;
     transition: height 1s linear;
     box-shadow: 0px 2px 3px 1px #00000066 ;
@@ -224,7 +230,7 @@ header, footer{
     grid-area: logo;
     display: inline-block;
     position: relative;
-    margin-left: 20px; 
+    margin-left: 10px; 
     height: fit-content;
     width: 160px;
     font: bold 1.6em/1em rancho, cursive;
@@ -266,16 +272,6 @@ header, footer{
     left: 48px;
     font: bold .8em/1em  rancho, cursive;
     white-space: nowrap;
-}
-
-
-.header-grid{
-    display: grid;
-    grid-template-columns: 160px calc(100% - 210px) 35px;
-    grid-template-rows: 100%;
-    grid-template-areas: 
-        "logo nav button1";
-    align-items: center;
 }
 
 #theme-switch {
@@ -398,13 +394,13 @@ nav ul li a {
 
 .slide {
     position: relative;
-    height: 400px;
+    height: 300px;
     text-align: left;
     color: var(--textcolor);
     padding: 10px;
     display: flex;
     flex-flow: column nowrap;
-    text-align: center
+    text-align: center;
 }
 
 .slide-1 img {
@@ -412,22 +408,23 @@ nav ul li a {
     margin: auto auto;
 }
 
-.slide-me div, .slide-project div {
+.slide-me div {
     display: flex;
     margin: auto auto;
     height: 40%;
 }
 
 
-.slide-me img, .slide-project img {
+.slide-me img {
     height: 100%;
     margin: auto 0;
-}
-
-.slide-me img {
     border-radius: 50%;
     border: 2px solid var(--textcolor);
     padding: 2px
+}
+
+.slide-project p {
+    margin-top: 12%
 }
 
 .slide-1 h1{ 
