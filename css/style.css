@@ -9,14 +9,15 @@ html {
     scroll-behavior: smooth
 }
 
-body{
+body {
+    direction: ltr;
     --cardcolor: #e2e2e2;
     --accentcolor: #307ac3;
     --textcolor: #38464f;
     --highlight: #29292914;
     background: rgb(222, 236, 236);
     background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
-	color: var(--textcolor);
+	  color: var(--textcolor);
     font-family: "Poppins";
     margin: 0;
 }
@@ -33,10 +34,11 @@ body{
     background: rgb(28, 46, 74);
     background: linear-gradient(93deg, rgba(28, 46, 74, 1) 0%, rgba(1, 15, 34, 1) 100%);
     z-index: -1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 110vw;
+    height: 110vh;
     opacity: 0;
     transition: opacity .5s linear;
 }
@@ -46,8 +48,9 @@ body{
 }
 
 .first-container {
-    width: 100%;
+    width: 100vw;
     padding: 10px;
+    overflow: hidden
 }
 
 a {
@@ -103,7 +106,7 @@ h6 {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 110vw;
     height: 100vh;
     background: rgb(222, 236, 236);
     background: linear-gradient(90deg, rgba(222, 236, 236, 1) 0%, rgba(195, 206, 219, 1) 100%);
@@ -126,22 +129,22 @@ h6 {
 }
 
 .first-ring {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     animation: rotate2 2s infinite linear;
     box-shadow: 0 0 2px 2px var(--accentcolor);
 }
 
 .second-ring {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     animation: rotate1 2s infinite linear;
     box-shadow: 0 0 2px 2px var(--accentcolor);
 }
 
 .third-ring {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     animation: rotate3 2s infinite linear;
     box-shadow: 0 0 2px 2px var(--accentcolor);
 }
@@ -205,7 +208,7 @@ h6 {
 
 header {
     height: 120px;
-    padding: 30px 20px ;
+    padding: 30px 20px
 }
 
 header, footer{
@@ -275,7 +278,7 @@ header, footer{
     align-items: center;
 }
 
-button[title="Change theme"] {
+#theme-switch {
     position: relative;
     right: 0;
     top: 0px;
@@ -291,7 +294,7 @@ button[title="Change theme"] {
     grid-area: button1;
 }
 
-button[title="Change theme"] span {
+#theme-switch span {
     display: block;
     border-radius: 50%;
     background-color: var(--cardcolor);
@@ -301,7 +304,7 @@ button[title="Change theme"] span {
 }
 
 
-button[onclick="dropDown()"] {
+#drop-button {
     display: none;
     position: relative;
     height: 20px;
@@ -479,6 +482,7 @@ nav ul li a {
 .container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -523,6 +527,7 @@ aside ul li:hover{
 
 section {
     margin-left: 7%;
+    margin-right: 0;
     width: 70%;
     position: relative;
 }
@@ -547,6 +552,7 @@ section {
     box-shadow: 0px 3px 3px 1px #00000066
 }
 
+
 .card-ltr { /* to make scroll bar on left 2 */
     direction: ltr;
     z-index: 1;
@@ -564,21 +570,20 @@ section {
     border-radius: 12px;
     color: var(--cardcolor);
     outline: none;
-    margin:  auto 20px auto 0;
+    margin:  auto 10px;
     cursor: pointer;
 }
 
 h2 {
     display: inline-block;
-    width:  80%;
-    margin-bottom: 0.83em;
-    margin-top: 0.83em
+    margin: 0.83em 0;
 }
 
-.h2titles{
-    display: flex;
-    flex-flow: row nowrap;
+
+.h2titles {
+  display: flex;
 }
+
 
 .card img {
     display: block;
@@ -636,7 +641,7 @@ tr:first-of-type {
 }
 
 .show {
-    transform: translateX(0);
+    transform: translateX(0) !important; 
     opacity: 1;
     visibility: visible;
 }
@@ -669,9 +674,9 @@ tr:first-of-type {
 }
 
 
-.card1 {border-color: #e17055}
-.card2 {border-color: #00b894}
-.card3 {border-color: #9b59b6}
+.card1 {border-color: #e17055 !important}
+.card2 {border-color: #00b894 !important}
+.card3 {border-color: #9b59b6 !important}
 
 .card1 h2, .card1 .Note, .card1 a {
     color: #e17055;
@@ -710,7 +715,7 @@ footer {
 }
 
 footer i {
-    margin-right: 10px;
+    margin: 0 10px;
 }
 
 footer .contact-us { 
@@ -747,136 +752,25 @@ footer a {
     color: var(--textcolor)
 }
 
+footer button {
+  background-color: transparent;
+  width: 40%;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: var(--accentcolor);
+  font-weight: bold
+}
+
+footer > div:last-of-type {
+  margin: 20px auto 10px;
+  width: 20%;
+  text-align: center
+}
 
 /*~~~~~~~~~~~~///Media Queries/// //////////////////////////////////////////////////////////////////////////////////////////*/
 
-@media (max-width: 450px) {
-    footer .contact-us {
-        flex-flow: column nowrap;
-    }
-    
-    footer .contact-us > div {
-        margin: 0 auto
-    }
-}
 
-
-@media (min-width: 1400px) {
-  .first-container {
-    width: 90%;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-}
-
-
-@media (min-width: 600px) and (max-width: 855px){
-
-    .menu li {
-        width: 70%;
-        margin: 0 auto 20px ;
-    }
-
-}
-
-
-@media (max-width: 855px){ 
-  
-  .header-grid {
-    grid-template-columns: repeat(8, 10%) 5% 5% 5% 5%;
-    grid-template-rows: 60px auto;
-    grid-template-areas: 
-    "logo logo . . . . . .  button1 . . button2"
-    "nav nav nav nav nav nav nav nav nav nav nav nav";
-    align-items: center
-  }
-  
-  button[onclick="dropDown()"] {
-        display: inline-block;
-  }
-  
-   
-  .popups { 
-        position: absolute; 
-        flex-flow: column nowrap; 
-  } 
-   
-  .popups div, .popups p { 
-        text-align: center; 
-        margin: 10px auto; 
-        width: 100%; 
-  } 
-   
-  .popups:before {left: 47%} 
-   
-   
-    nav { 
-        margin: 20px 0 0 0;
-    } 
- 
-    nav ul { 
-        width: 100%; 
-        padding: 0; 
-        display: flex; 
-        flex-flow: row wrap; 
-        justify-content: space-around 
-    } 
-    
-    nav ul li { 
-        width: 90%;
-        border: 1px solid var(--textcolor); 
-        border-radius: 15px; 
-        text-align:center; 
-        display: block; 
-        padding: 10px; 
-        margin: 10px auto; 
-        white-space: wrap; 
-        line-height: 1.3em 
-    } 
-     
-    .projectpop, .mepop { 
-        right: 0;
-        width: 80%; 
-    } 
-     
-    .projectpop {top: 280px} 
-    
-    .mepop {top: 215px}
-     
-    section { 
-        height: 800px; 
-        margin-left: 0;
-    } 
-     
-    .container section, .container aside { 
-        width: 100% 
-    } 
-    
-    .card {
-        min-width: 100%;
-        max-width: 100%
-    }
-    
-    .container {
-        padding: 0;
-        overflow: visible;
-    }
-    
-    .menu li:hover {
-        transform: scale(1.03);
-    }
-    .card h2 {
-        font-size: 1.4em
-    }
-    
-    footer {
-        flex-flow: column nowrap;
-    }
-    
-    footer > div {
-        width: 100%;
-    }
-}
 
 
 /* still Testing :
@@ -906,4 +800,5 @@ footer a {
 #soon h2, #soon h5 {
     line-height: 1em;
 }
+
 
