@@ -1,16 +1,16 @@
 import {gettingPageReady} from '../main.js';
 
-import * as part1 from './English/content-one.js';
+import * as part1 from './English/content1.js';
 
-import * as part2 from './English/content-two.js';
+import * as part2 from './English/content2.js';
 
-import * as part3 from './English/content-three.js';
+import * as part3 from './English/content3.js';
 
-//import * as part1ar from './Arabic/content-one-ar.js';
+//import * as part1ar from './Arabic/content1Ar.js';
 
-//import * as part2ar from './Arabic/content-two-ar.js';
+//import * as part2ar from './Arabic/content2Ar.js';
 
-//import * as part3ar from './Arabic/content-three-ar.js';
+//import * as part3ar from './Arabic/content3Ar.js';
 
 let html = document.querySelector('html');
 
@@ -51,38 +51,38 @@ function translateContentTo(language) {
       
   } else if (language === 'ar') {
     /*
-    part1ar.data();
-    part1ar.concati();
-    part1ar.condition();
-    part1ar.output();
-    part1ar.func();
-    part1ar.loop();
-    part1ar.regular();
-    part1ar.array();
-    part1ar.string();
-    part1ar.date();
-    part1ar.event();
-    part1ar.math();
+    part1ar.dataAr();
+    part1ar.concatiAr();
+    part1ar.conditionAr();
+    part1ar.outputAr();
+    part1ar.funcAr();
+    part1ar.loopAr();
+    part1ar.regularAr();
+    part1ar.arrayAr();
+    part1ar.stringAr();
+    part1ar.dateAr();
+    part1ar.eventAr();
+    part1ar.mathAr();
     
     //////////////////////////
     
-    part2ar.selector();
-    part2ar.attribute();
-    part2ar.classes();
-    part2ar.create();
-    part2ar.dfunc();
-    part2ar.styling();
+    part2ar.selectorAr();
+    part2ar.attributeAr();
+    part2ar.classesAr();
+    part2ar.createAr();
+    part2ar.dfuncAr();
+    part2ar.stylingAr();
     
     //////////////////////////
     
-    part3ar.windowSt();
-    part3ar.windowNd();
-    part3ar.history();
-    part3ar.navigation();
-    part3ar.screen();
-    part3ar.cookie()
+    part3ar.window1Ar();
+    part3ar.window2Ar();
+    part3ar.historyAr();
+    part3ar.navigationAr();
+    part3ar.screenAr();
+    part3ar.cookieAr()
     */
-    window.alert('hello, Arabic content is not ready yet')
+    window.alert('Hello, Sorry for not translating the content but I really believe that some programming terms may lose their meaning when it is translated to another language. \n مرحباً، أعتذر عن ترجمة المحتوى لأنني أعتقد حقاً أن بعض المصطلحات البرمجية تفقد معناها عند ترجمتها إلى أي لغة أخرى.')
   }
   
 }
