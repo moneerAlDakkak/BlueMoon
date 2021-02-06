@@ -261,7 +261,7 @@ header, footer{
 .lastName {
     grid-area: laast;
     display: inline-block;
-    font: bold 19px/70% rancho, cursive;
+    font: bold 16px/70% rancho, cursive;
     white-space: nowrap;
 }
 
