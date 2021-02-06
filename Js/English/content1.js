@@ -44,7 +44,7 @@ function data() {
                         undefined: when calling a variable without defining it 
                     </li>
                     <li>
-                        NaN: when making an operation (other than +) between a number and non number
+                        NaN: when making an operation (other than +) between a number and non number <br>
                         * The function <code>isNan()</code> confirms if the input is a number or not
                     </li>
                     <li>Null</li>
