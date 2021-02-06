@@ -229,52 +229,64 @@ header, footer{
 
 .logo {
     grid-area: logo;
-    display: inline-grid;
-    width: 168px;
-    font: bold 22px/1em rancho, cursive;
+    display: inline-block;
+    position: relative;
+    height: fit-content;
+    width: 160px;
+    font: bold 1.6em/1em rancho, cursive;
     cursor: pointer;
-    grid-row-gap: 10px;
-    grid-template-columns: 42px 4px 70px 2px 4px 48px;
-    grid-template-rows: repeat(2, 20px);
-    grid-template-areas:
-        "M . rest l . img"
-        "M . laast l . img";
 }
 
 .logo:before {
-    grid-area: M;
     content: 'M';
+    display: inline-block;
     border-radius: 10px;
-    font: bold 26px/54px rancho, cursive;
+    font: bold 1.1em/50px rancho, cursive;
     text-align: center;
-    color: var(--cardcolor);
+    color: var(--cardcolor) ; 
     background-color: var(--accentcolor);
 }
 
 .restName {
-    grid-area: rest;
+    z-index:1;
     display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    height: 36px;
+    width: 80px;
+    display: inline-block;
+    margin-left: 8px;
     color: var(--accentcolor);
-    font: bold 37px/76% rancho, cursive;
+    font: bold 1.7em/1em rancho, cursive;
+}
+
+.restName span {
+    position: absolute;
 }
 
 .lastName {
-    grid-area: laast;
     display: inline-block;
-    font: bold 17px/70% rancho, cursive;
+    position: absolute;
+    top: 26px;
+    left: 42px;
+    font: bold .8em/1em  rancho, cursive;
     white-space: nowrap;
 }
 
 .logo:after {
-    grid-area: l;
     content: '';
-    height: 100%;
+    position: absolute;
+    right: 50px;
+    height: 80%;
+    top: 10%;
     border-right: 2px solid var(--textcolor);
 }
 
 #f {
-    grid-area: img;
-    width: 50px;
+    position: absolute;
+    right: 0px;
+    height: 100%;
 }
 
 #theme-switch {
