@@ -223,7 +223,7 @@ header, footer{
     width: 100%;
     overflow: hidden;
     transition: height 1s linear;
-    box-shadow: 0px 2px 3px 1px #00000066 ;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,.3) ;
 }
 
 .logo {
@@ -433,7 +433,7 @@ nav ul li a {
     width: 100%; 
     margin: 0px auto;
     padding: 10px;
-    text-shadow: 2px 2px 3px #00000055;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.3);
     cursor: pointer
 }
 
@@ -512,7 +512,7 @@ aside ul li {
     color: #ffffff;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0px 2px 3px 1px #00000066;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,.3);
     transition: transform .5s ease,
                 background .5s ease
 }
@@ -546,7 +546,7 @@ section {
     transition: all .7s ease;
     border-left: 20px solid black;
     overflow: auto;
-    box-shadow: 0px 3px 3px 1px #00000066
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,.3)
 }
 
 
@@ -781,7 +781,7 @@ footer > div:last-of-type {
     border-radius: 15px;
     margin: 20px 0;
     text-align: center;
-    box-shadow: 0px 2px 3px 1px #00000066 ;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,.3) ;
     overflow: hidden;
 }
 
