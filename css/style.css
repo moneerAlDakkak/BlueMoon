@@ -230,7 +230,6 @@ header, footer{
     grid-area: logo;
     display: inline-block;
     position: relative;
-    margin-left: 10px; 
     height: fit-content;
     width: 160px;
     font: bold 1.6em/1em rancho, cursive;
@@ -241,7 +240,7 @@ header, footer{
     content: 'M';
     display: inline-block;
     border-radius: 10px;
-    font: bold 1.2em/54px rancho, cursive;
+    font: bold 1.1em/54px rancho, cursive;
     padding: 0 12px;
     color: var(--cardcolor) ; 
     background-color: var(--accentcolor);
@@ -251,8 +250,8 @@ header, footer{
     z-index:1;
     display: inline-block;
     position: absolute;
-    top: -8px;
-    left: 40px;
+    top: -5px;
+    left: 35px;
     height: 36px;
     width: 80px;
     display: inline-block;
@@ -268,10 +267,25 @@ header, footer{
 .lastName {
     display: inline-block;
     position: absolute;
-    top: 28px;
-    left: 48px;
+    top: 26px;
+    left: 42px;
     font: bold .8em/1em  rancho, cursive;
     white-space: nowrap;
+}
+
+.logo:after {
+    content: '';
+    position: absolute;
+    right: 50px;
+    height: 80%;
+    top: 10%;
+    border-right: 2px solid var(--textcolor);
+}
+
+#f {
+    position: absolute;
+    right: 0px;
+    height: 100%;
 }
 
 #theme-switch {
