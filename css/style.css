@@ -245,7 +245,7 @@ header, footer{
     grid-area: M;
     content: 'M';
     border-radius: 10px;
-    font: bold 1.1em/54px rancho, cursive;
+    font: bold 26px/54px rancho, cursive;
     text-align: center;
     color: var(--cardcolor);
     background-color: var(--accentcolor);
@@ -255,13 +255,13 @@ header, footer{
     grid-area: rest;
     display: inline-block;
     color: var(--accentcolor);
-    font: bold 1.7em/76% rancho, cursive;
+    font: bold 37px/76% rancho, cursive;
 }
 
 .lastName {
     grid-area: laast;
     display: inline-block;
-    font: bold .8em/70% rancho, cursive;
+    font: bold 17px/70% rancho, cursive;
     white-space: nowrap;
 }
 
