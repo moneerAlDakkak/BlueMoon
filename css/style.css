@@ -245,7 +245,7 @@ header, footer{
     grid-area: M;
     content: 'M';
     border-radius: 10px;
-    font: bold 26px/54px rancho, cursive;
+    font: bold 26px/50px rancho, cursive;
     text-align: center;
     color: var(--cardcolor);
     background-color: var(--accentcolor);
