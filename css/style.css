@@ -255,13 +255,13 @@ header, footer{
     grid-area: rest;
     display: inline-block;
     color: var(--accentcolor);
-    font: bold 1.7em/32px rancho, cursive;
+    font: bold 1.7em/76% rancho, cursive;
 }
 
 .lastName {
     grid-area: laast;
     display: inline-block;
-    font: bold .8em/14px rancho, cursive;
+    font: bold .8em/70% rancho, cursive;
     white-space: nowrap;
 }
 
