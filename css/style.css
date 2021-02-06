@@ -231,7 +231,7 @@ header, footer{
     grid-area: logo;
     display: inline-grid;
     width: 168px;
-    font: bold 24px/1em rancho, cursive;
+    font: bold 22px/1em rancho, cursive;
     cursor: pointer;
     grid-row-gap: 10px;
     grid-template-columns: 42px 4px 70px 2px 4px 48px;
