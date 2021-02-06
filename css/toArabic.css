@@ -1,7 +1,7 @@
 /* Arabic Site :
 */
 
-html[lang="ar"] .container, html[lang="ar"] .slideshow-father, html[lang="ar"] footer {
+/*html[lang="ar"] .container,*/ html[lang="ar"] .slideshow-father, html[lang="ar"] footer {
   direction: rtl;
 }
 /*
