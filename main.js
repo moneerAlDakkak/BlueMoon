@@ -134,6 +134,10 @@ export function gettingPageReady() {
   document.getElementById('lang-ar').onclick =_=> { translatePageTo('ar');
   };
   
+  document.querySelectorAll('aside').forEach((a) => {
+    a.firstElementChild.nextElementSibling.click()
+  })
+
 }
 
 
