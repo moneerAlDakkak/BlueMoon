@@ -11,7 +11,7 @@ html {
 
 body {
     direction: ltr;
-    --cardcolor: #e2e2e2;
+    --cardcolor: rgb(222, 236, 236);
     --accentcolor: #307ac3;
     --textcolor: #38464f;
     --highlight: rgba(49,49,49,.08);
@@ -24,7 +24,7 @@ body {
 }
 
 .dark-mode {
-    --cardcolor: #1c2e4a;
+    --cardcolor: rgb(28, 46, 74);
     --accentcolor: #ffe264;
     --textcolor: #fff;
     --highlight: rgba(1,7,27,.3);
