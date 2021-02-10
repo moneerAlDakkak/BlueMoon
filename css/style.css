@@ -49,7 +49,7 @@ body {
 }
 
 .first-container {
-    width: 100vw;
+    width: 100%;
     padding: 10px;
     overflow: hidden
 }
