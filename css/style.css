@@ -523,7 +523,7 @@ aside ul li {
 
 aside ul li:hover{
     transform: scale(1.09);
-    background-color: var(--accentcolor)
+    background-color: var(--accentcolor);
     color: #fff;
 }
 
