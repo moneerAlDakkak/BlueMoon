@@ -513,7 +513,7 @@ aside ul li {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 30px;
-    color: #ffffff;
+    color: var(--accentcolor);
     text-align: center;
     cursor: pointer;
     box-shadow: 0px 2px 3px 1px rgba(0,0,0,.3);
