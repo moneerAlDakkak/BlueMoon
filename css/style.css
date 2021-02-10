@@ -89,6 +89,7 @@ code:not(.full) {
     background-color: var(--highlight);
     padding: 4px;
     border-radius: 7px;
+    white-space: nowrap;
 }
 
 h6 {
@@ -524,7 +525,7 @@ aside ul li {
 aside ul li:hover{
     transform: scale(1.09);
     background-color: var(--accentcolor);
-    color: #fff;
+    color: var(--cardcolor);
 }
 
 section {
