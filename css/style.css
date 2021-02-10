@@ -523,6 +523,7 @@ aside ul li {
 
 aside ul li:hover{
     transform: scale(1.09);
+    background-color: var(--accentcolor)
     color: #fff;
 }
 
@@ -548,7 +549,7 @@ section {
     line-height: 2em;
     border-radius: 15px;
     transition: all .7s ease;
-    border-left: 20px solid black;
+    border-left: 20px solid var(--accentcolor);
     overflow: auto;
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,.3)
 }
@@ -566,7 +567,7 @@ section {
     font-family: poppins;
     font-size: 1em;
     font-weight: bold;
-    background-color: transparent;
+    background-color: var(--accentcolor);
     border: none;
     border-radius: 12px;
     color: var(--cardcolor);
@@ -578,6 +579,7 @@ section {
 h2 {
     display: inline-block;
     margin: 0.83em 0;
+    color: var(--accentcolor)
 }
 
 
@@ -647,9 +649,10 @@ tr:first-of-type {
     visibility: visible;
 }
 
+
 /* 7) Cards coloring
 */
-
+/*
 .menu1 li {
     color: #e17055;
 }
@@ -703,7 +706,7 @@ tr:first-of-type {
 .card3 .back-button {
     background-color: #9b59b6;
 }
-
+*/
 
 
 /* 8) Footer
