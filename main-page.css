@@ -1,0 +1,115 @@
+body {
+    --gold: var(--accentcolor);
+}
+
+.dark-mode {
+    --cardcolor: rgb(72, 69, 69);
+    --accentcolor: #DAC076;
+    --textcolor: #fff;
+    --highlight: rgba(1, 7, 27, .3);
+    --gold: linear-gradient(140deg, rgba(255, 234, 189, 0.9999816024696434) 0%, rgba(218, 191, 119, 1) 42%, rgba(93, 74, 31, 1) 90%);
+}
+
+
+#darkBg {
+    background: rgb(72, 69, 69);
+    background: linear-gradient(90deg, rgba(72, 69, 69, 1) 0%, rgba(26, 26, 26, 1) 100%)
+}
+
+.logo:before {
+    background: var(--gold);
+}
+
+article {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px
+}
+
+article > div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+article > div > ul {
+    list-style: none;
+    padding: 0
+}
+
+article > div > ul li{
+    display: inline-block;
+    border: 1px solid var(--textcolor); 
+    border-radius: 15px; 
+    text-align:center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 10px 10px 0; 
+    white-space: wrap; 
+    line-height: 1.3em
+}
+
+article > div > ul li:hover , article > div> ul li a:hover {
+    color: var(--accentcolor);
+    cursor: pointer
+}
+
+article > div > ul li a { 
+    text-decoration: none;
+    color: var(--textcolor)
+}
+
+.slide img:not(.slide-1 img) {
+    height: 100px;
+    margin: 30px auto 10px;
+    border-radius: 15px;
+}
+
+.visit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--accentcolor);
+    font-family: poppins;
+    font-weight: bold;
+    color: var(--cardcolor);
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+article:nth-of-type(even) {
+    background-color: rgba(0,0,0,.1);
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+article img[alt="me"] {
+    width: 140px;
+    border-radius: 50%;
+    margin: 20px calc(50% - 70px);
+    border: 2px solid var(--textcolor);
+    padding: 2px;
+}
+
+@media (max-width: 855px) {
+    header {
+        grid-template-areas: 
+        "logo logo . . . . . . . . button1 ."
+        "nav nav nav nav nav nav nav nav nav nav nav nav";
+    }
+}
+
+html[lang="ar"] body {
+    direction: rtl
+}
+
+header {
+    direction: ltr
+}
+
+.slide {
+    justify-content: center
+}

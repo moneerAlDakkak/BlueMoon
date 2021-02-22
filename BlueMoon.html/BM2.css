@@ -1,0 +1,12 @@
+.dark-mode {
+    --cardcolor: rgb(0, 70, 38);
+    --accentcolor: #AAECA5;
+    --textcolor: #fff;
+    --highlight: rgba(1,7,27,.3);
+}
+
+
+#darkBg {
+    background: rgb(26, 85, 58);
+    background: linear-gradient(90deg, rgba(26, 85, 58, 1) 0%, rgba(20, 47, 32, 1) 100%);
+}
